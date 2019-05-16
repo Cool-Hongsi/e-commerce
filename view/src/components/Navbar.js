@@ -21,10 +21,10 @@ export default class Navbar extends React.Component{
 
                         <div className="Navbar-nav">
                             <ul>
-                                <li><a className="active" href="/">Cart</a></li>
+                                <li><a href="/"><i class="fas fa-shopping-cart"></i></a></li>
                                 <li><a href="/">Login</a></li>
                                 <li><a href="/">Contact</a></li>
-                                <li><a href="/">About</a></li>
+                                <li><a className="active" href="/">About</a></li>
                             </ul>
                         </div>
 

@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 import Navbar from './components/Navbar';
-import Searchbar from './components/Searchbar';
+import SubNavbar from './components/SubNavbar';
 
 export default class App extends React.Component{
   render(){
@@ -10,7 +10,7 @@ export default class App extends React.Component{
       <div>
         <div className="App-outside">
           <Navbar />
-          <Searchbar />
+          <SubNavbar />
         </div>
       </div>
     )

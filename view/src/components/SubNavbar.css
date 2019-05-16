@@ -1,0 +1,29 @@
+.SubNavbar-outside{
+    position: relative;
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+    background: #f0f0f0;
+}
+
+.SubNavbar-outside .SubNavbar-inside{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.SubNavbar-outside .SubNavbar-inside ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.SubNavbar-outside .SubNavbar-inside ul li{
+    padding: 50px;
+}
+
+.SubNavbar-outside .SubNavbar-inside ul li a{
+    display: block;
+    text-decoration: none;
+    color: #000;
+}
