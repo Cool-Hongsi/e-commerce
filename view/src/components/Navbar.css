@@ -1,0 +1,101 @@
+.Navbar-outside{
+    position: relative;
+    width: 90%;
+    margin: auto;
+    /* display: table; */
+}
+
+.Navbar-outside .Navbar-inside{
+    display: flex;
+    padding: 20px;
+    /* display: table-cell;
+    vertical-align: middle; */
+}
+
+.Navbar-outside .Navbar-inside .Navbar-logo{
+    width: 30%;
+    font-size: 2rem;
+    margin-top: .6rem;
+}
+
+.Navbar-outside .Navbar-inside .Navbar-searchbar{
+    /* width: 30%; */
+    font-size: 2rem;
+    margin-top: .6rem;
+    background: #2f3640;
+    height: 40px;
+    padding: 10px;
+    border-radius: 40px;
+}
+
+.Navbar-outside .Navbar-inside .Navbar-searchbar .search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: #fff;
+    font-size: 16px;
+    transition: .4s;
+    line-height: 40px;
+    width: 0px;
+}
+
+.Navbar-outside .Navbar-inside .Navbar-searchbar .search-btn{
+    color: #e84118;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+}
+  
+.Navbar-outside .Navbar-inside .Navbar-searchbar:hover > .search-txt{
+    width: 160px;
+    padding: 0 6px;
+}
+  
+.Navbar-outside .Navbar-inside .Navbar-searchbar:hover > .search-btn{
+    color: #fff;
+}
+
+.fas:hover{
+    color: red;
+}
+
+.Navbar-outside .Navbar-inside .Navbar-nav{
+    width: 40%;
+    font-size: 1.3rem;
+}
+
+.Navbar-outside .Navbar-inside .Navbar-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+  
+.Navbar-outside .Navbar-inside .Navbar-nav ul li {
+    float: right;
+}
+  
+.Navbar-outside .Navbar-inside .Navbar-nav ul li a {
+    display: block;
+    color: #666;
+    text-decoration: none;
+    padding: 20px;
+}
+  
+.Navbar-outside .Navbar-inside .Navbar-nav ul li a:hover:not(.active) {
+    background-color: #ddd;
+}
+  
+.Navbar-outside .Navbar-inside .Navbar-nav ul li a.active {
+    color: white;
+    background-color: #4CAF50;
+}
