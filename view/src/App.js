@@ -1,17 +1,17 @@
 import React from 'react';
 import './App.css';
-
-import Navbar from './components/Navbar';
-import SubNavbar from './components/SubNavbar';
+import { Route, Switch } from 'react-router-dom';
+import Home from './components/Home';
 
 export default class App extends React.Component{
   render(){
     return(
       <div>
-        <div className="App-outside">
-          <Navbar />
-          <SubNavbar />
-        </div>
+        <Switch>
+          <Route exact path="/" render={() => (
+            <Home />
+          )}/>
+        </Switch>
       </div>
     )
   }

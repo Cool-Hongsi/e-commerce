@@ -1,36 +1,51 @@
 import React from 'react';
-import './Navbar.css';
+import './NavBar.css';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 
-export default class Navbar extends React.Component{
-    render(){
-        return(
-            <div>
-                <div className="Navbar-outside">
-                    <div className="Navbar-inside">
+export default class NavBar extends React.Component{
 
-                        <div className="Navbar-logo">
-                            BRAND
-                        </div>
+    constructor(props) {
+        super(props);
 
-                        <div className="Navbar-searchbar">
-                            <input className="search-txt" type="text" placeholder="Search for" />
-                            <button className="search-btn">
-                                <i className="fas fa-search"></i>
-                            </button>
-                        </div>
+        this.state = {
+            isOpen: false
+        };
 
-                        <div className="Navbar-nav">
-                            <ul>
-                                <li><a href="/"><i class="fas fa-shopping-cart"></i></a></li>
-                                <li><a href="/">Login</a></li>
-                                <li><a href="/">Contact</a></li>
-                                <li><a className="active" href="/">About</a></li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        )
+        this.toggle = this.toggle.bind(this);
     }
+    
+    toggle() {
+    this.setState({
+      isOpen: !this.state.isOpen
+        })
+    };
+    
+    render() {
+        return (
+            <div>
+                <Navbar color="light" light expand="md">
+                <NavbarBrand href="/">BRAND</NavbarBrand>
+                <NavbarToggler onClick={this.toggle} />
+                <Collapse isOpen={this.state.isOpen} navbar>
+                    <Nav className="ml-auto" navbar>
+                    <NavItem>
+                        <input type="text" placeholder="Search For" />
+                    </NavItem>
+                    </Nav>
+                    <Nav className="ml-auto" navbar>
+                    <NavItem>
+                        <NavLink href="/">Wish</NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="/">Login</NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="/"><i class="fas fa-shopping-cart"></i></NavLink>
+                    </NavItem>
+                    </Nav>
+                </Collapse>
+                </Navbar>
+            </div>
+    );
+  }
 }
