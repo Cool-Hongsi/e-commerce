@@ -1,0 +1,28 @@
+.tags {
+    background-color: navy;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+.product-detail {
+    height: 70vh;
+    max-height: 70vh;
+    padding-top: 10vh;
+}
+.pd-detail-img{
+    border: 1px solid black;
+    height: 100%;
+}
+.bt-group{
+    width: 100%;
+    text-align: right;
+}
+.pd-btn {
+    margin: 5px;
+    margin-top: 20px;
+}
+
+p{
+    padding-top: 1em;
+    color: grey;
+}

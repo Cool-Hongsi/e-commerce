@@ -14,4 +14,5 @@
     transform : translate(-50%, -50%);
     letter-spacing: 3px;
     width: 80%;
+    z-index: 1;
 }

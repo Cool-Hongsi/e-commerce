@@ -1,9 +1,10 @@
 import React from 'react';
 import './SideBar.css';
+import { withRouter } from 'react-router-dom';
 
 import { Container, Row, Col, ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
-export default class SideBar extends React.Component{
+class SideBar extends React.Component{
 
     constructor(props) {
         super(props);
@@ -16,6 +17,7 @@ export default class SideBar extends React.Component{
 
         this.toggleOpen = this.toggleOpen.bind(this);
         this.toggleClose = this.toggleClose.bind(this);
+        this.changePage = this.changePage.bind(this);
     }
     
     toggleOpen(value) {
@@ -54,6 +56,10 @@ export default class SideBar extends React.Component{
         }
     }
 
+    changePage = () => {
+        this.props.history.push('/product');
+    }
+
     render(){
         return(
             <div>
@@ -81,7 +87,7 @@ export default class SideBar extends React.Component{
                                         </DropdownToggle>
                                         <DropdownMenu>
                                         <DropdownItem header>Title</DropdownItem>
-                                        <DropdownItem>AA</DropdownItem>
+                                        <DropdownItem onClick={this.changePage}>AA</DropdownItem>
                                         <DropdownItem divider />
                                         <DropdownItem>BB</DropdownItem>
                                         </DropdownMenu>
@@ -108,3 +114,5 @@ export default class SideBar extends React.Component{
         )
     }
 }
+
+export default withRouter(SideBar);
