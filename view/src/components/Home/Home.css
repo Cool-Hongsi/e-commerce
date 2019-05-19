@@ -1,7 +1,7 @@
 .Home-outside{
     position: relative;
     width: 80%;
-    height: 60vh;
+    height: 80vh;
     margin: auto;
     text-align: center;
 }
@@ -11,4 +11,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.Home-outside .Home-inside .bestItem{
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
 }

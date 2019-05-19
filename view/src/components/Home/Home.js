@@ -1,8 +1,8 @@
 import React from 'react';
 import './Home.css';
 
-import MainContainer from './MainContainer';
-import { Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption } from 'reactstrap';
+import MainContainer from '../MainContainer/MainContainer';
+import { Container, Row, Col, Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption } from 'reactstrap';
 
 const items = [
     {
@@ -88,6 +88,24 @@ export default class Home extends React.Component{
                             <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
                             <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
                         </Carousel>
+                        <div className="bestItem">
+                            <Container>
+                                <Row>
+                                    <Col xs="6" sm="6" md="3" lg="3" xl="3">
+                                        Best1
+                                    </Col>
+                                    <Col xs="6" sm="6" md="3" lg="3" xl="3">
+                                        Best2
+                                    </Col>
+                                    <Col xs="6" sm="6" md="3" lg="3" xl="3">
+                                        Best3
+                                    </Col>
+                                    <Col xs="6" sm="6" md="3" lg="3" xl="3">
+                                        Best4
+                                    </Col>
+                                </Row>
+                            </Container>
+                        </div>
                     </div>
                 </div>
           </MainContainer>
