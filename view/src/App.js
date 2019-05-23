@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
-import Home from './components/Home';
+import Home from './components/Home/Home';
 import Product from './components/Product/Product';
-abcdefghong
+hong
 export default class App extends React.Component{
   render(){
     return(
