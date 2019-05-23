@@ -14,7 +14,7 @@ export default class NavBar extends React.Component{
         this.toggle = this.toggle.bind(this);
     }
     
-    toggle() {
+    toggle = () => {
     this.setState({
       isOpen: !this.state.isOpen
         })
@@ -29,7 +29,7 @@ export default class NavBar extends React.Component{
                 <Collapse isOpen={this.state.isOpen} navbar>
                     <Nav className="ml-auto" navbar>
                     <NavItem>
-                        <input type="text" placeholder="Search For" />
+                        <input type="text" placeholder="Search For" className="search-bar" /><i className="fas fa-search"></i>
                     </NavItem>
                     </Nav>
                     <Nav className="ml-auto" navbar>
@@ -40,7 +40,7 @@ export default class NavBar extends React.Component{
                         <NavLink href="/">Login</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink href="/"><i class="fas fa-shopping-cart"></i></NavLink>
+                        <NavLink href="/"><i className="fas fa-shopping-cart"></i></NavLink>
                     </NavItem>
                     </Nav>
                 </Collapse>

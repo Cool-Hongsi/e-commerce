@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
-import Home from './components/Home';
-import ProductDetail from './components/ProductDetail';
+import Home from './components/Home/Home';
+import Product from './components/Product/Product';
 
 export default class App extends React.Component{
   render(){
@@ -12,8 +12,8 @@ export default class App extends React.Component{
           <Route exact path="/" render={() => (
             <Home />
           )}/>
-          <Route exact path="/product" render={()=>(
-            <ProductDetail />
+           <Route exact path="/product" render={() => (
+            <Product />
           )}/>
         </Switch>
       </div>

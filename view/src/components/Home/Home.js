@@ -1,8 +1,8 @@
 import React from 'react';
 import './Home.css';
 
-import MainContainer from './MainContainer';
-import { Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption } from 'reactstrap';
+import MainContainer from '../MainContainer/MainContainer';
+import { Container, Row, Col, Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption } from 'reactstrap';
 
 const items = [
     {
@@ -33,27 +33,27 @@ export default class Home extends React.Component{
         this.onExited = this.onExited.bind(this);
       }
     
-      onExiting() {
+      onExiting = () => {
         this.animating = true;
       }
     
-      onExited() {
+      onExited = () => {
         this.animating = false;
       }
     
-      next() {
+      next = () => {
         if (this.animating) return;
         const nextIndex = this.state.activeIndex === items.length - 1 ? 0 : this.state.activeIndex + 1;
         this.setState({ activeIndex: nextIndex });
       }
     
-      previous() {
+      previous = () => {
         if (this.animating) return;
         const nextIndex = this.state.activeIndex === 0 ? items.length - 1 : this.state.activeIndex - 1;
         this.setState({ activeIndex: nextIndex });
       }
     
-      goToIndex(newIndex) {
+      goToIndex = (newIndex) => {
         if (this.animating) return;
         this.setState({ activeIndex: newIndex });
       }
@@ -88,6 +88,24 @@ export default class Home extends React.Component{
                             <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
                             <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
                         </Carousel>
+                        <div className="bestItem">
+                            <Container>
+                                <Row>
+                                    <Col xs="6" sm="6" md="3" lg="3" xl="3">
+                                        Best1
+                                    </Col>
+                                    <Col xs="6" sm="6" md="3" lg="3" xl="3">
+                                        Best2
+                                    </Col>
+                                    <Col xs="6" sm="6" md="3" lg="3" xl="3">
+                                        Best3
+                                    </Col>
+                                    <Col xs="6" sm="6" md="3" lg="3" xl="3">
+                                        Best4
+                                    </Col>
+                                </Row>
+                            </Container>
+                        </div>
                     </div>
                 </div>
           </MainContainer>

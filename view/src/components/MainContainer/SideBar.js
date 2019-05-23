@@ -3,6 +3,7 @@ import './SideBar.css';
 import { withRouter } from 'react-router-dom';
 
 import { Container, Row, Col, ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { withRouter } from 'react-router-dom';
 
 class SideBar extends React.Component{
 
@@ -20,7 +21,7 @@ class SideBar extends React.Component{
         this.changePage = this.changePage.bind(this);
     }
     
-    toggleOpen(value) {
+    toggleOpen = (value) => {
         if(value === 'product1'){
             this.setState({
                 product1: true
@@ -38,7 +39,7 @@ class SideBar extends React.Component{
         }
     }
 
-    toggleClose(value) {
+    toggleClose = (value) => {
         if(value === 'product1'){
             this.setState({
                 product1: false
@@ -70,7 +71,7 @@ class SideBar extends React.Component{
                                 <Col xs="4" sm="4" md="4" lg="4" xl="4">
                                     <ButtonDropdown isOpen={this.state.product1} onMouseEnter={() => this.toggleOpen('product1')} onMouseLeave={() => this.toggleClose('product1')}>
                                         <DropdownToggle>
-                                            Product1
+                                            <div onClick={this.changePage}>Product1</div>
                                         </DropdownToggle>
                                         <DropdownMenu>
                                         <DropdownItem header>Title</DropdownItem>
@@ -83,7 +84,7 @@ class SideBar extends React.Component{
                                 <Col xs="4" sm="4" md="4" lg="4" xl="4">
                                 <ButtonDropdown isOpen={this.state.product2} onMouseEnter={() => this.toggleOpen('product2')} onMouseLeave={() => this.toggleClose('product2')}>
                                         <DropdownToggle>
-                                            Product2
+                                            <div onClick={this.changePage}>Product2</div>
                                         </DropdownToggle>
                                         <DropdownMenu>
                                         <DropdownItem header>Title</DropdownItem>
@@ -96,7 +97,7 @@ class SideBar extends React.Component{
                                 <Col xs="4" sm="4" md="4" lg="4" xl="4">
                                 <ButtonDropdown isOpen={this.state.product3} onMouseEnter={() => this.toggleOpen('product3')} onMouseLeave={() => this.toggleClose('product3')}>
                                         <DropdownToggle>
-                                            Product3
+                                            <div onClick={this.changePage}>Product3</div>
                                         </DropdownToggle>
                                         <DropdownMenu>
                                         <DropdownItem header>Title</DropdownItem>
