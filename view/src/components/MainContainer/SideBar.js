@@ -1,5 +1,6 @@
 import React from 'react';
 import './SideBar.css';
+import { withRouter } from 'react-router-dom';
 
 import { Container, Row, Col, ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import { withRouter } from 'react-router-dom';
@@ -87,7 +88,7 @@ class SideBar extends React.Component{
                                         </DropdownToggle>
                                         <DropdownMenu>
                                         <DropdownItem header>Title</DropdownItem>
-                                        <DropdownItem>AA</DropdownItem>
+                                        <DropdownItem onClick={this.changePage}>AA</DropdownItem>
                                         <DropdownItem divider />
                                         <DropdownItem>BB</DropdownItem>
                                         </DropdownMenu>
