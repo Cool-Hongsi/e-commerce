@@ -4,3 +4,18 @@
     height: 100%;
     text-align: center;
 }
+
+.Filter{
+    width: 80%;
+    margin: auto;
+    text-align: right;
+    margin-top: 40px;
+}
+
+.Product-outside .Product-inside .initial-page{
+    display: block;
+}
+
+.Product-outside .Product-inside .filtered-page{
+    display: none;
+}
