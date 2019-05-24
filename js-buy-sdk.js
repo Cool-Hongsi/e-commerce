@@ -1,5 +1,5 @@
-import fetch from 'node-fetch';
-import Client from 'shopify-buy';
+const fetch = require('node-fetch');
+const Client = require('shopify-buy');
 
 global.fetch = fetch;
 
@@ -8,4 +8,5 @@ const client = Client.buildClient({
     domain: 'hellodemostore.myshopify.com'
 });
 
-export default client;
+module.exports = client;
+// export default client;
