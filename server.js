@@ -10,7 +10,7 @@ const productsPromise = client.product.fetchAll();
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-app.get('/', (req, res) => {
+app.get('/products', (req, res) => {
     const checkoutId = req.query.checkoutId;
   
     // Create a checkout if it doesn't exist yet

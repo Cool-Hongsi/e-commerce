@@ -2,37 +2,38 @@ import React from 'react';
 import './Product.css';
 
 import MainContainer from '../MainContainer/MainContainer';
-import image from '../../image/hong.png';
+// import image from '../../image/hong.png';
 import { Container, Row, Col } from 'reactstrap';
 import ProductList from './ProductList';
+import axios from 'axios';
 
-var items = [
-    {
-        img : image,
-        price : 100,
-        name : "A"
-    },
-    {
-        img : image,
-        price : 200,
-        name : "B"
-    },
-    {
-        img : image,
-        price : 300,
-        name : "C"
-    },
-    {
-        img : image,
-        price : 400,
-        name : "D"
-    },
-    {
-        img : image,
-        price : 500,
-        name : "E"
-    }
-]
+// var items = [
+//     {
+//         img : image,
+//         price : 100,
+//         name : "A"
+//     },
+//     {
+//         img : image,
+//         price : 200,
+//         name : "B"
+//     },
+//     {
+//         img : image,
+//         price : 300,
+//         name : "C"
+//     },
+//     {
+//         img : image,
+//         price : 400,
+//         name : "D"
+//     },
+//     {
+//         img : image,
+//         price : 500,
+//         name : "E"
+//     }
+// ]
 
 export default class Product extends React.Component{
 
@@ -40,13 +41,23 @@ export default class Product extends React.Component{
         super(props);
 
         this.state = {
-            array : items,
+            // array : items,
+            array : [],
             value : ''
         }
 
         this.handleChange = this.handleChange.bind(this);
+        this.getData = this.getData.bind(this);
         // this.highFilter = this.highFilter.bind(this);
         // this.lowFilter = this.lowFilter.bind(this);
+    }
+
+    getData = () => {
+        fetch('http://localhost:8081/products', { mode: 'no-cors' }).then((result) => {
+            result.json().then((realResult) => {
+                console.log(realResult);
+            })
+        })
     }
 
     handleChange = (e) => {
@@ -97,6 +108,7 @@ export default class Product extends React.Component{
     render(){
         return(
             <MainContainer>
+                <button onClick={this.getData}>Get</button>
                 <div className="Filter">
                     <span>Order By </span>
                     <select value={this.state.value} onChange={this.handleChange}>
